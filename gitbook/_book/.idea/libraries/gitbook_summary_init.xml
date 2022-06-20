@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gitbook_summary_init">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gitbook_summary_init.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
