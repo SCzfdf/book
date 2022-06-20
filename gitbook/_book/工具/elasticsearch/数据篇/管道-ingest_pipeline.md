@@ -57,7 +57,7 @@ node.roles: [ ingest ]
       {
         "set": {
           "field": "ingest.field.{{name}}",
-          "value": "{{{_id}}}"
+          "value": "(_id)" // 这里用双中括号
         }
       }
     ]
@@ -127,7 +127,7 @@ POST _ingest/pipeline/common-pipeline-001/_simulate
 
 * `set`: 设置一个字段, 如果字段存在就替换
 
-  * `field`: (string) 要插入/更新的字段名称, 支持模板片段(1.`{{xx}}`, 2.`{{{xx}}}`, 3.`_source.xx`)
+  * `field`: (string) 要插入/更新的字段名称, 支持模板片段(1.`(xx)(双中括号)`, 2.`(xx)三中括号`, 3.`_source.xx`)
 
   * `value`: 插入的值, 支持模板片段(后续很多都支持, 需要用到在细看, 不另外了)
 
