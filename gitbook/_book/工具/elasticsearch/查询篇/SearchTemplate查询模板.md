@@ -22,9 +22,9 @@
     "source": {
       "query": {
         "range": {
-          "(key)": {
-            "gte": "(gte)",
-            "lte": "(lte)"
+          "{{key}}": {
+            "gte": "{{gte}}",
+            "lte": "{{lte}}"
           }
         }
       }
@@ -53,8 +53,8 @@
         "query": {
           "range": {
             "intRange": {
-              "gte": "(gte)",
-              "lte": "(lte)"
+              "gte": "{{gte}}",
+              "lte": "{{lte}}"
             }
           }
         }
@@ -107,8 +107,8 @@
       "query": {
         "range": {
           "intRange": {
-            "gte": "(gte)",
-            "lte": "(lte)"
+            "gte": "{{gte}}",
+            "lte": "{{lte}}"
           }
         }
       }
@@ -156,16 +156,16 @@ GET my-index/_search/template
 ```json
 GET common-test-001/_msearch/template
 { }
-{ "id": "my-search-template", "params": { "gte": 11, "lte": 12)
+{ "id": "my-search-template", "params": { "gte": 11, "lte": 12}}
 { }
-{ "id": "my-search-template", "params": { "gte": 12, "lte": 13)
+{ "id": "my-search-template", "params": { "gte": 12, "lte": 13}}
 
 
 GET _msearch/template
 { "index": "common-test-001" }
-{ "id": "my-search-template", "params": { "gte": 11, "lte": 12)
+{ "id": "my-search-template", "params": { "gte": 11, "lte": 12}}
 { "index": "common-test-001" }
-{ "id": "my-search-template", "params": { "gte": 12, "lte": 13)
+{ "id": "my-search-template", "params": { "gte": 12, "lte": 13}}
 ```
 
 
@@ -217,7 +217,7 @@ DELETE _scripts/my-search-template
 
 ![image-20220620173151368](SearchTemplate%E6%9F%A5%E8%AF%A2%E6%A8%A1%E6%9D%BF.assets/image-20220620173401653.png)
 
-> gitbook \不能打....用截图和/代替...
+> gitbook \不能打....用截图和~~~代替...
 
 ```json
 POST _render/template
@@ -226,8 +226,8 @@ POST _render/template
     "query": {
       "range": {
         "intRange": {
-          "gte": "(gte)(^gte)11(gte)",
-          "lte": "(lte)"
+          "gte": "{{gte}}{{^gte}}11{{~~~gte}}",
+          "lte": "{{lte}}"
         }
       }
     }
@@ -246,7 +246,7 @@ POST _render/template
 
 将文本进行一次url编码. 格式如下
 
-`(#url)  可以是参数((host)),也可以直接是字符.反正在里面的都会被编码 `
+`{{#url}}  可以是参数({{host}}),也可以直接是字符(/abc).反正在里面的都会被编码  {{/url}}`
 
 ```json
 POST _render/template
@@ -254,7 +254,7 @@ POST _render/template
   "source": {
     "query": {
       "match": {
-        "nameText": "(#url)(host)\abc(url)"
+        "nameText": "{{#url}}{{host}}abc{{~~~url}}"
       }
     }
   },
@@ -270,7 +270,7 @@ POST _render/template
 
 将数组格式内的字符进行拼接
 
-`(#join delimiter='分隔符')date.formats(/join delimiter='分隔符')`
+`{{#join delimiter='分隔符'}}date.formats{{/join delimiter='分隔符'}}`
 
 分隔符默认`,`
 
@@ -280,7 +280,7 @@ POST _render/template
   "source": {
     "query": {
       "match": {
-        "nameText": "(#join delimiter='|')host(join delimiter='|')"
+        "nameText": "{{#join delimiter='|'}}host{{join delimiter='|'}}"
       }
     }
   },
@@ -296,7 +296,7 @@ POST _render/template
 
 将变量转为json格式
 
-`(#toJson)tags(/toJson)`
+`{{#toJson}}tags{{/toJson}}`
 
 > 感觉用的会比较少, 相当于直接写查询语句. source要经过编码, 还不如手写....
 >
@@ -305,7 +305,7 @@ POST _render/template
 ```json
 POST _render/template
 {
-  "source": "{ \"query\": { \"terms\": { \"tags\": (#toJson)tags(/toJson) )}",
+  "source": "{ \"query\": { \"terms\": { \"tags\": {{#toJson}}tags{{/toJson}} }}}",
   "params": {
     "tags": [
       "prod",
@@ -338,7 +338,7 @@ POST _render/template
 
 ![image-20220620180600478](SearchTemplate%E6%9F%A5%E8%AF%A2%E6%A8%A1%E6%9D%BF.assets/image-20220620180600478.png)
 
-> 需要注意的是, 如果用if-else, 那么当`(#condition)if content(/condition)`结果为false时. 就会直接用`(^condition)else content(/condition)`的内容
+> 需要注意的是, 如果用if-else, 那么当`{{#condition}}if content{{/condition}}`结果为false时. 就会直接用`{{^condition}}else content{{/condition}}`的内容
 
 ```json
 POST _render/template
@@ -347,7 +347,7 @@ POST _render/template
     "query": {
       "range": {
         "intRange": {
-          "lte": "(#bool)(lte)(bool)(^bool)(lte2)(bool)"
+          "lte": "{{#bool}}{{lte}}{{~~~bool}}{{^bool}}{{lte2}}{{~~~bool}}"
         }
       }
     }
@@ -367,7 +367,7 @@ POST _render/template
 ```json
 POST _render/template
 {
-  "source": "{ \"query\": { \"bool\": { \"filter\": [ { \"range\": { \"@timestamp\": { \"gte\": (#year_scope) \"now-1y/d\" (/year_scope) (^year_scope) \"now-1d/d\" (/year_scope) , \"lt\": \"now/d\" )}, { \"term\": { \"user.id\": \"(user_id)\" )])}",
+  "source": "{ \"query\": { \"bool\": { \"filter\": [ { \"range\": { \"@timestamp\": { \"gte\": {{#year_scope}} \"now-1y/d\" {{/year_scope}} {{^year_scope}} \"now-1d/d\" {{/year_scope}} , \"lt\": \"now/d\" }}}, { \"term\": { \"user.id\": \"{{user_id}}\" }}]}}}",
   "params": {
     "year_scope": true,
     "user_id": "kimchy"
