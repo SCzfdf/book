@@ -57,7 +57,7 @@ node.roles: [ ingest ]
       {
         "set": {
           "field": "ingest.field.{{name}}",
-          "value": "{{{_id}}}"
+          "value": "(_id)" // 这里用{{}}
         }
       }
     ]
