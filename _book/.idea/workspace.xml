@@ -4,7 +4,181 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7a4e0f-99ff-4985-975a-e4c11c92a8de" name="Changes" comment="" />
+    <list default="true" id="3e7a4e0f-99ff-4985-975a-e4c11c92a8de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../gitbook/_book/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gitbook/_book/.idea/libraries/gitbook_summary_init.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gitbook/_book/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gitbook/_book/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gitbook/_book/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/JAVA内存区域与JAVA内存模型.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/JAVA内存区域与JAVA内存模型.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/JVM/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/JVM/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/一些有时候会忘记的编程规范.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/一些有时候会忘记的编程规范.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Collection/Blocking/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Collection/Blocking/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Collection/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Collection/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/信号量-Semaphore.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/信号量-Semaphore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/内存栅栏-CyclicBarrier.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/内存栅栏-CyclicBarrier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/可重入锁-ReentrantLock.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/可重入锁-ReentrantLock.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/读写锁-ReentrantReadWriteLock.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/读写锁-ReentrantReadWriteLock.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/闭锁-CountDownLatch.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/Lock/闭锁-CountDownLatch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/监控系统文件变化-WatchService.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/监控系统文件变化-WatchService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/简单遍历文件树-FileVisitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/简单遍历文件树-FileVisitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/自定义配置文件-Properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/内置工具类/自定义配置文件-Properties.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/OOA·OOD·OOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/OOA·OOD·OOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/值传递和引用传递.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/值传递和引用传递.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/单分派&amp;多分派.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/单分派&amp;多分派.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/双亲委派机制.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/双亲委派机制.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/双重分派.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/双重分派.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/==和equal.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/==和equal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/JDK和JRE.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/JDK和JRE.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/String和StringBuilder和StringBuffer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/String和StringBuilder和StringBuffer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/为什么要重写hashCode方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/为什么要重写hashCode方法.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/成员变量和局部变量.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/成员变量和局部变量.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/接口和抽象类的区别.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/接口和抽象类的区别.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/显式声明无参构造方法的作用.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/显式声明无参构造方法的作用.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/构造方法有哪些特性.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/构造方法有哪些特性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/线程和进程.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/线程和进程.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/重载和重写.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/基础中的基础/重载和重写.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/实参与形参.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/实参与形参.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/封装继承多态.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/封装继承多态.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/深克隆&amp;浅克隆.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/深克隆&amp;浅克隆.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/简单看懂软件类图.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/简单看懂软件类图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/继承实现组合聚合关联依赖.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/继承实现组合聚合关联依赖.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/耦合和内聚.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/耦合和内聚.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/进制换算.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/进制换算.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/面向对象和面向过程.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/面向对象和面向过程.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/基础/面向接口设计基本原则.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/基础/面向接口设计基本原则.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/底层/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/底层/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/底层/字节码文件阅读.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/底层/字节码文件阅读.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程/创建线程的4种方式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程/创建线程的4种方式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程/线程.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程/线程.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程/线程与中断.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程/线程与中断.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程/线程状态.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程/线程状态.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程/线程细枝末梢的一点东西.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程/线程细枝末梢的一点东西.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/CAS.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/CAS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Java并发基石/AQS.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Java并发基石/AQS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Java并发基石/Condition接口.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Java并发基石/Condition接口.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Java并发基石/Lock接口.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Java并发基石/Lock接口.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Java并发基石/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Java并发基石/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/LockRecord和Monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/LockRecord和Monitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/synchronized一些关键点.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/synchronized一些关键点.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/synchronized的内存语义.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/synchronized的内存语义.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/synchronized的种类与优化.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/synchronized的种类与优化.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/wait,notify,notifyAll.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/wait,notify,notifyAll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/从字节码和对象头理解synchronized.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/从字节码和对象头理解synchronized.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/偏向锁.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/偏向锁.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/轻量级锁.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/轻量级锁.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/重量级锁.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Synchronized/重量级锁.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Ticket_CLH_MCS.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Ticket_CLH_MCS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Volatile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/Volatile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/JMM内存屏障.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/JMM内存屏障.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/Java内存模型.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/Java内存模型.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/happens-before原则.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/happens-before原则.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/从硬件层面理解可见性问题.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/从硬件层面理解可见性问题.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/关于底层的一些其他东西.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/关于底层的一些其他东西.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/并发编程中的三个概念-原子性可见性有序性.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/并发编程中的三个概念-原子性可见性有序性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/总线锁和缓存锁定.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/总线锁和缓存锁定.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/指令重排.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/指令重排.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/缓存行与缓存填充.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/并发基础/缓存行与缓存填充.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/锁.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程与锁/锁.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程池/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程池/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程池/ThreadPoolExecutor.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程池/ThreadPoolExecutor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/线程池/线程池.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/线程池/线程池.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/三种工厂模式对比与总结.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/三种工厂模式对比与总结.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/单例模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/单例模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/原型模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/原型模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/工厂方法模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/工厂方法模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/建造者模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/建造者模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/抽象工厂模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/抽象工厂模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/简单工厂模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/创建型模式/简单工厂模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/享元模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/享元模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/代理模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/代理模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/外观模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/外观模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/桥接模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/桥接模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/组合模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/组合模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/装饰者模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/装饰者模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/适配器模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/结构型模式/适配器模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/命令模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/命令模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/委派模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/委派模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/模板方法模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/模板方法模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/状态模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/状态模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/策略模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/策略模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/观察者模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/观察者模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/访问者模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/访问者模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/责任链模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/责任链模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/迭代器模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/Java/设计模式/行为型模式/迭代器模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/docker卸载.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/docker卸载.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/win安装.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/win安装.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/升级_centOS.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/升级_centOS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/安装.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/安装升级卸载/安装.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/容器/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/容器/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/容器/什么是容器.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/容器/什么是容器.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/容器/创建容器.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/容器/创建容器.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/容器/限制容器内存.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/容器/限制容器内存.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/常用命令.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/常用命令.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/更换镜像源.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/更换镜像源.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/配置.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/配置.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/SpringBoot服务镜像.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/SpringBoot服务镜像.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/gosu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/gosu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/jdk镜像.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/jdk镜像.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/jenkins+maven.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/dockerfile/jenkins+maven.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/什么是镜像.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/什么是镜像.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/关于sh和bash.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/关于sh和bash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/自定义镜像.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/自定义镜像.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/自定义镜像2-多阶段构建.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/镜像/自定义镜像2-多阶段构建.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/docker/问题合集.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/docker/问题合集.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/ElasticStack.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/ElasticStack.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/Elasticsearch介绍.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/Elasticsearch介绍.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/Elasticsearch源码环境搭建.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/Elasticsearch源码环境搭建.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/总.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/总.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/查询篇/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/查询篇/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/Mapping.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/Mapping.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/别名.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/别名.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/字段类型属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/字段类型属性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/常用字段类型.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/常用字段类型.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/特殊字段类型.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/特殊字段类型.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/索引介绍与创建.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/索引介绍与创建.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/索引的结构类型.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/工具/elasticsearch/索引篇/索引的结构类型.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/环境搭建.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/环境搭建.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/动态规划.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/动态规划.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/区间操作-前缀和,差分.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/区间操作-前缀和,差分.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/区间操作2-线段树.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/区间操作2-线段树.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/情景问题/Knuth 洗牌算法.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/情景问题/Knuth 洗牌算法.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/情景问题/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/情景问题/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/情景问题/topN问题.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/情景问题/topN问题.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/情景问题/切蛋糕问题.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/情景问题/切蛋糕问题.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/AVL树.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/AVL树.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/B+树.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/B+树.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/B树.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/B树.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/SUMMARY.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/SUMMARY.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/树.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/树.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/红黑树.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/数据结构/树/红黑树.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitbook/_book/算法/算法复杂度计算.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gitbook/_book/算法/算法复杂度计算.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +200,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gitbook/_book" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -46,6 +220,7 @@
       <workItem from="1652431161968" duration="1427000" />
       <workItem from="1655704761129" duration="77000" />
       <workItem from="1655705866357" duration="3442000" />
+      <workItem from="1655712509509" duration="1231000" />
     </task>
     <servers />
   </component>

@@ -215,7 +215,9 @@ DELETE _scripts/my-search-template
 
 如果params不存在会使用默认值值. 格式如下
 
-`{{my-var}}{{^my-var}}default value{{/my-var}}`
+![image-20220620173151368](SearchTemplate%E6%9F%A5%E8%AF%A2%E6%A8%A1%E6%9D%BF.assets/image-20220620173401653.png)
+
+> gitbook \不能打....用截图
 
 ```json
 POST _render/template
