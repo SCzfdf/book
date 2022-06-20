@@ -1,0 +1,6 @@
+1. 启动docker
+systemctl start docker
+
+2. 镜像 (images)
+    查看镜像列表          docker images
+    

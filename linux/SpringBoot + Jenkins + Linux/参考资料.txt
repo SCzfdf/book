@@ -1,0 +1,5 @@
+SpringBoot 使用插件打包成可执行文件的内嵌源码解析
+https://www.jianshu.com/p/e21b95006371
+
+将java打jar包成linux后台服务service
+https://www.cnblogs.com/woms/p/7040747.html

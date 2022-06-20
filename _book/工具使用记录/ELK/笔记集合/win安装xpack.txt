@@ -1,0 +1,76 @@
+elk 安装 xpack
+win 下只能用网络下载,本地会解析错误(win万恶的斜杠)
+
+
+安装流程:
+
+配置好es后
+输入命令:
+.\elasticsearch-plugin install x-pack (网络安装)
+输入后自动下载x-pack
+下载完成后会有个
+@@@@@@@@@@@@@@@@@@@@@@@@@
+@WARNING: plugin requires additional permissions@
+@@@@@@@@@@@@@@@@@@@@@@@@@
+选择y
+还有一个
+WARNING: plugin forks a native controller
+也是选择y
+之后就ok了
+查看plugins发现多了一个x-pack
+
+
+破解
+将修改的class文件替换进x-pack-core-6.2.2.jar中
+启动es
+./bin/x-pack/setup-passwords interactive
+如果提示404
+Unexpected response code [404] from calling GET http://127.0.0.1:9200/_xpack/security/_authenticate?pretty
+而且客户端出现
+杩滅▼涓绘満寮鸿揩鍏抽棴浜嗕竴涓幇鏈夌殑杩炴帴銆?之类的乱码
+是编码问题
+参考资料: https://elasticsearch.cn/question/974
+在jvm.options里修改编码
+#-Dfile.encoding=UTF-8
+
+-Dfile.encoding=GBK
+没问题应该是如下提示
+Initiating the setup of passwords for reserved users elastic,kibana,logstash_system.
+You will be prompted to enter passwords as the process progresses.
+Please confirm that you would like to continue [y/N]y
+选择y
+接下来会要求你设置elk的密码
+设置完成后会强制中断当前9200的连接
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+页面刷新后提示要求输入密码
+
+
+Enter password for [elastic]:
+Reenter password for [elastic]:
+Enter password for [kibana]:
+Reenter password for [kibana]:
+Enter password for [logstash_system]:
+Reenter password for [logstash_system]:
+Changed password for user [kibana]
+Changed password for user [logstash_system]
+Changed password for user [elastic]
+
+linux安装完成后启动可能会提示
+Exception in thread "main" java.nio.file.AccessDeniedException: /diska/ELK/elasticsearch-6.2.4/config/elasticsearch.keystore
+再给账户赋权就好了
+
+linux不会在启动设置账户密码
+要启动后运行命令
+./bin/x-pack/setup-passwords interactive
+
+这时候打开kibana 会报错
+Status changed from yellow to red - Authentication Exception
+es会提示
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+这时候开logstash 也会报错
+[logstash.outputs.elasticsearch] Failed to install template.
+es无提示
+
+

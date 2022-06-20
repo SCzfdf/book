@@ -1,0 +1,11 @@
+win Tomcat控制台窗口乱码
+windows默认编码集为GBK，由于使用startup.bat启动tomcat时，
+它会读取catalina.bat的代码并打开一个新窗口运行。打开的cmd默认编码可能不是utf-8，与系统编码不一致，所以导致乱码。
+
+解决
+1. 找到${CATALINA_HOME}/conf/logging.properties 
+2. 添加语句：java.util.logging.ConsoleHandler.encoding = GBK 
+2.5 直接在下面加是不可以的,因为默认等于UTF-8
+3. 重启tomcat，查看日志数据即可！
+
+===========================================================================

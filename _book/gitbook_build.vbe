@@ -1,0 +1,3 @@
+Set ws = CreateObject("Wscript.Shell")
+
+ws.run "cmd /c gitbook_build.bat",0,true

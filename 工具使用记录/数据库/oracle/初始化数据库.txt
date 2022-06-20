@@ -1,0 +1,38 @@
+# 查看cdb和pdb名称
+select con_id,dbid,guid,name,open_mode from v$pdbs;
+# 切换cdb和pdb
+alter session set container=CDB$ROOT;
+alter session set container=PDB1;
+
+# 删除表空间 逻辑和物理都删除
+drop tablespace cashway including contents and datafiles;
+drop tablespace cashway_temp including contents and datafiles;
+
+# 查看\创建表空间 
+select name from v$datafile;
+CREATE TABLESPACE cashway LOGGING DATAFILE '/u01/app/oracle/product/12.2.0.1/oradata/cdb1/pdb1/cashway.DBF'  
+SIZE 100M AUTOEXTEND ON NEXT 32M MAXSIZE 500M EXTENT MANAGEMENT LOCAL;
+
+# 查看\创建临时表空间
+select name from v$tempfile;
+create temporary tablespace cashway_temp tempfile '/u01/app/oracle/product/12.2.0.1/oradata/cdb1/pdb1/cashway_temp.DBF'
+size 100m autoextend on next 32m maxsize 500m extent management local;
+
+# 创建用户并赋予默认表空间 -> 表空间在cdb和pdb都要创建一遍
+create user c##cashway01
+identified by 123456
+default tablespace CASHWAY temporary tablespace CASHWAY_TEMP;
+
+# 修改用户的默认表空间
+alter user c##cashway default tablespace CASHWAY temporary tablespace CASHWAY_TEMP;
+
+# 赋权
+grant connect,resource to c##cashway01;
+grant create session to c##cashway01;  
+grant create table to   c##cashway01;  
+grant create tablespace to c##cashway01;  
+grant create view to   c##cashway01;
+# 表空间权限 -> 不加就不可以写入表
+alter user C##CASHWAY quota unlimited on cashway;
+
+select * from dba_users;

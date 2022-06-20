@@ -1,0 +1,5 @@
+1.  jvm.options
+    将-Xms1g, -Xmx1g 修改为内存的一半(建议是这样)
+    
+2.  logstash.yml
+    

@@ -1,0 +1,7 @@
+Set ws = CreateObject("Wscript.Shell")
+
+ws.run "cmd /c git_pull.bat",0,true
+
+wscript.sleep 30000
+
+ws.run "cmd /c git_all_push.bat",0,true

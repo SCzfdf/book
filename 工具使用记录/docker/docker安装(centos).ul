@@ -1,0 +1,55 @@
+!! 基于官方文档 https://docs.docker.com/install/linux/docker-ce/centos/ !!
+docker 推荐使用3种
+A.使用docker的储存库管理 -> 官方推荐
+B.使用下载的rpm包安装管理
+C.使用自动化脚本安装
+
+这里使用rpm包
+
+1. 删除旧版本或者自带版本
+sudo yum remove docker \
+    docker-client \
+    docker-client-latest \
+    docker-common \
+    docker-latest \
+    docker-latest-logrotate \
+    docker-logrotate \
+    docker-engine
+
+2. 下载稳定版本
+    到 https://download.docker.com/linux/centos/7/x86_64/stable/Packages/ 选择
+    (这里用docker-ce-18.09.3-3.el7.x86_64.rpm)
+    yum install (rpm全路径) -> 这时会报错
+
+3. 下载前置 -> 同一个下载地址 https://download.docker.com/linux/centos/7/x86_64/stable/Packages/
+    containerd.io-1.2.2-3.el7.x86_64.rpm
+    docker-ce-cli-18.09.3-3.el7.x86_64.rpm  
+    -> 最好是根据第二部的报错信息来决定下什么,什么版本 当时最新的需要这2个 比较旧的会需要docker-ce-selinux
+
+4. 安装前置和docker
+    yum install (io 和cli 的rpm全路径)
+    yum install (docker rpm全路径)
+
+5. 运行docker
+    sudo systemctl start docker
+
+6. 运行docker-hello-world
+    sudo docker run hello-world
+    -> 这个命令将下载一个测试image 和容器
+    -> 当容器运行时会打印一些消息然后退出
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
