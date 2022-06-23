@@ -77,6 +77,7 @@
             * [责任链模式.md](Java\设计模式\行为型模式\责任链模式.md)
             * [迭代器模式.md](Java\设计模式\行为型模式\迭代器模式.md)
     * [JVM](Java\JVM\SUMMARY.md)
+        * [概念.md](Java\JVM\概念.md)
     * [内置工具类](Java\内置工具类\SUMMARY.md)
         * [Lock](Java\内置工具类\Lock\SUMMARY.md)
             * [可重入锁-ReentrantLock.md](Java\内置工具类\Lock\可重入锁-ReentrantLock.md)
