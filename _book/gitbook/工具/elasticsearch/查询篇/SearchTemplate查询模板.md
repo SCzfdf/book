@@ -215,7 +215,9 @@ DELETE _scripts/my-search-template
 
 如果params不存在会使用默认值值. 格式如下
 
-`{{my-var}}{{^my-var}}default value{{/my-var}}`
+![image-20220620173151368](SearchTemplate%E6%9F%A5%E8%AF%A2%E6%A8%A1%E6%9D%BF.assets/image-20220620173401653.png)
+
+> gitbook \不能打....用截图和~~~代替...
 
 ```json
 POST _render/template
@@ -224,7 +226,7 @@ POST _render/template
     "query": {
       "range": {
         "intRange": {
-          "gte": "{{gte}}{{^gte}}11{{/gte}}",
+          "gte": "{{gte}}{{^gte}}11{{~~~gte}}",
           "lte": "{{lte}}"
         }
       }
@@ -252,7 +254,7 @@ POST _render/template
   "source": {
     "query": {
       "match": {
-        "nameText": "{{#url}}{{host}}/abc{{/url}}"
+        "nameText": "{{#url}}{{host}}abc{{~~~url}}"
       }
     }
   },
@@ -278,7 +280,7 @@ POST _render/template
   "source": {
     "query": {
       "match": {
-        "nameText": "{{#join delimiter='|'}}host{{/join delimiter='|'}}"
+        "nameText": "{{#join delimiter='|'}}host{{join delimiter='|'}}"
       }
     }
   },
@@ -334,9 +336,7 @@ POST _render/template
 
 条件语句. 满足才填充
 
-`{{#condition}}content{{/condition}}`
-
-`{{#condition}}if content{{/condition}} {{^condition}}else content{{/condition}}`
+![image-20220620180600478](SearchTemplate%E6%9F%A5%E8%AF%A2%E6%A8%A1%E6%9D%BF.assets/image-20220620180600478.png)
 
 > 需要注意的是, 如果用if-else, 那么当`{{#condition}}if content{{/condition}}`结果为false时. 就会直接用`{{^condition}}else content{{/condition}}`的内容
 
@@ -347,7 +347,7 @@ POST _render/template
     "query": {
       "range": {
         "intRange": {
-          "lte": "{{#bool}}{{lte}}{{/bool}}{{^bool}}{{lte2}}{{/bool}}"
+          "lte": "{{#bool}}{{lte}}{{~~~bool}}{{^bool}}{{lte2}}{{~~~bool}}"
         }
       }
     }
