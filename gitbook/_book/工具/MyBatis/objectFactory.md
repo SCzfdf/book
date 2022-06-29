@@ -38,3 +38,4 @@ public class ExampleObjectFactory extends DefaultObjectFactory {
 
 
 > 不过想不通什么场景需要去替换默认的....
+

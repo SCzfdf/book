@@ -5324,36 +5324,38 @@
                                 
                                 <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#message&#x5C5E;&#x6027;&#x8BE6;&#x89E3;basicproperties"><b></b>Message&#x5C5E;&#x6027;&#x8BE6;&#x89E3;(BasicProperties)</a></li></ul></div><a href="#message&#x5C5E;&#x6027;&#x8BE6;&#x89E3;basicproperties" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="message&#x5C5E;&#x6027;&#x8BE6;&#x89E3;basicproperties"><a name="message&#x5C5E;&#x6027;&#x8BE6;&#x89E3;basicproperties" class="anchor-navigation-ex-anchor" href="#message&#x5C5E;&#x6027;&#x8BE6;&#x89E3;basicproperties"><i class="fa fa-link" aria-hidden="true"></i></a>Message&#x5C5E;&#x6027;&#x8BE6;&#x89E3;(BasicProperties)</h1>
 <p><a href="https://blog.csdn.net/yaomingyang/article/details/102636666" target="_blank">RabbitMQ&#x53D1;&#x9001;&#x6D88;&#x606F;&#x9644;&#x5E26;BasicProperties&#x5C5E;&#x6027;&#x8BE6;&#x89E3;</a></p>
-<p>```java
-// &#x5173;&#x8054;ID &#x4E00;&#x822C;&#x7528;&#x6765;&#x5F53;&#x505A;&#x6D88;&#x606F;&#x7684;&#x552F;&#x4E00;id
-private String correlationId;
-// 1&#xFF08;nopersistent&#xFF09;&#x975E;&#x6301;&#x4E45;&#x5316;&#xFF0C;2&#xFF08;persistent&#xFF09;&#x6301;&#x4E45;&#x5316;
-private Integer deliveryMode;
-// &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x56DE;&#x590D;&#x7684;&#x961F;&#x5217;&#x7684;&#x540D;&#x79F0;
-private String replyTo;
-// &#x6D88;&#x606F;&#x7684;&#x5931;&#x6548;&#x65F6;&#x95F4;(&#x5982;&#x679C;&#x8BBE;&#x7F6E;10000(10&#x79D2;). &#x5982;&#x679C;&#x6CA1;&#x6709;&#x88AB;&#x6D88;&#x8D39;&#x8005;&#x6D88;&#x8D39;&#x5C31;&#x5220;&#x9664;&#x4E86;)
-private String expiration;
-// &#x6D88;&#x606F;ID
-private String messageId;</p>
-<p>// &#x6D88;&#x606F;&#x7684;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#xFF1A;text/plain
-private String contentType;
-// &#x6D88;&#x606F;&#x5185;&#x5BB9;&#x7F16;&#x7801;
-private String contentEncoding;
-// &#x8BBE;&#x7F6E;&#x6D88;&#x606F;&#x7684;header,&#x7C7B;&#x578B;&#x4E3A;Map<string,object>
-private Map<string,object> headers;
-// &#x6D88;&#x606F;&#x7684;&#x4F18;&#x5148;&#x7EA7;(&#x5E94;&#x8BE5;&#x662F;&#x4ECE;&#x5C0F;&#x5230;&#x5927;.&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x4F18;&#x5148;&#x6D88;&#x8D39;)
-private Integer priority;
-// &#x6D88;&#x606F;&#x7684;&#x65F6;&#x95F4;&#x6233;
-private Date timestamp;
-// &#x7C7B;&#x578B;
-private String type;
-// &#x7528;&#x6237;ID
-private String userId;
-// &#x5E94;&#x7528;&#x7A0B;&#x5E8F;ID
-private String appId;
-// &#x96C6;&#x7FA4;ID
-private String clusterId;
-```<hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz',appKey: 'fjxXbfHqEhtFc58pCX6dS5Qe',placeholder: 'Just go go',avatar: 'mp',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script></string,object></string,object></p>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x5173;&#x8054;ID &#x4E00;&#x822C;&#x7528;&#x6765;&#x5F53;&#x505A;&#x6D88;&#x606F;&#x7684;&#x552F;&#x4E00;id</span>
+<span class="hljs-keyword">private</span> String correlationId;
+<span class="hljs-comment">// 1&#xFF08;nopersistent&#xFF09;&#x975E;&#x6301;&#x4E45;&#x5316;&#xFF0C;2&#xFF08;persistent&#xFF09;&#x6301;&#x4E45;&#x5316;</span>
+<span class="hljs-keyword">private</span> Integer deliveryMode;
+<span class="hljs-comment">// &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x56DE;&#x590D;&#x7684;&#x961F;&#x5217;&#x7684;&#x540D;&#x79F0;</span>
+<span class="hljs-keyword">private</span> String replyTo;
+<span class="hljs-comment">// &#x6D88;&#x606F;&#x7684;&#x5931;&#x6548;&#x65F6;&#x95F4;(&#x5982;&#x679C;&#x8BBE;&#x7F6E;10000(10&#x79D2;). &#x5982;&#x679C;&#x6CA1;&#x6709;&#x88AB;&#x6D88;&#x8D39;&#x8005;&#x6D88;&#x8D39;&#x5C31;&#x5220;&#x9664;&#x4E86;)</span>
+<span class="hljs-keyword">private</span> String expiration;
+<span class="hljs-comment">// &#x6D88;&#x606F;ID</span>
+<span class="hljs-keyword">private</span> String messageId;
+
+
+<span class="hljs-comment">// &#x6D88;&#x606F;&#x7684;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#xFF1A;text/plain</span>
+<span class="hljs-keyword">private</span> String contentType;
+<span class="hljs-comment">// &#x6D88;&#x606F;&#x5185;&#x5BB9;&#x7F16;&#x7801;</span>
+<span class="hljs-keyword">private</span> String contentEncoding;
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x6D88;&#x606F;&#x7684;header,&#x7C7B;&#x578B;&#x4E3A;Map&lt;String,Object&gt;</span>
+<span class="hljs-keyword">private</span> Map&lt;String,Object&gt; headers;
+<span class="hljs-comment">// &#x6D88;&#x606F;&#x7684;&#x4F18;&#x5148;&#x7EA7;(&#x5E94;&#x8BE5;&#x662F;&#x4ECE;&#x5C0F;&#x5230;&#x5927;.&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x4F18;&#x5148;&#x6D88;&#x8D39;)</span>
+<span class="hljs-keyword">private</span> Integer priority;
+<span class="hljs-comment">// &#x6D88;&#x606F;&#x7684;&#x65F6;&#x95F4;&#x6233;</span>
+<span class="hljs-keyword">private</span> Date timestamp;
+<span class="hljs-comment">// &#x7C7B;&#x578B;</span>
+<span class="hljs-keyword">private</span> String type;
+<span class="hljs-comment">// &#x7528;&#x6237;ID</span>
+<span class="hljs-keyword">private</span> String userId;
+<span class="hljs-comment">// &#x5E94;&#x7528;&#x7A0B;&#x5E8F;ID</span>
+<span class="hljs-keyword">private</span> String appId;
+<span class="hljs-comment">// &#x96C6;&#x7FA4;ID</span>
+<span class="hljs-keyword">private</span> String clusterId;
+</code></pre>
+<p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz',appKey: 'fjxXbfHqEhtFc58pCX6dS5Qe',placeholder: 'Just go go',avatar: 'mp',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script></p>
 
                                 
                                 </section>
@@ -5397,7 +5399,7 @@ private String clusterId;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Message属性详解-BasicProperties.md","level":"1.5.5.3.8","depth":4,"next":{"title":"高级特性","level":"1.5.5.3.9","depth":4,"path":"工具/MQ/rabbitMQ/高级特性/SUMMARY.md","ref":"工具/MQ/rabbitMQ/高级特性/SUMMARY.md","articles":[{"title":"消息限流与重回队列.md","level":"1.5.5.3.9.1","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/消息限流与重回队列.md","ref":"工具/MQ/rabbitMQ/高级特性/消息限流与重回队列.md","articles":[]},{"title":"事务机制.md","level":"1.5.5.3.9.2","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/事务机制.md","ref":"工具/MQ/rabbitMQ/高级特性/事务机制.md","articles":[]},{"title":"Confirm确认消息.md","level":"1.5.5.3.9.3","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/Confirm确认消息.md","ref":"工具/MQ/rabbitMQ/高级特性/Confirm确认消息.md","articles":[]},{"title":"Return消息机制.md","level":"1.5.5.3.9.4","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/Return消息机制.md","ref":"工具/MQ/rabbitMQ/高级特性/Return消息机制.md","articles":[]},{"title":"TTL与死信队列.md","level":"1.5.5.3.9.5","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/TTL与死信队列.md","ref":"工具/MQ/rabbitMQ/高级特性/TTL与死信队列.md","articles":[]}]},"previous":{"title":"关于绑定.md","level":"1.5.5.3.7","depth":4,"path":"工具/MQ/rabbitMQ/关于绑定.md","ref":"工具/MQ/rabbitMQ/关于绑定.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","flexible-alerts","ancre-navigation","valine"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"notice":{"label":{"de":"注意","en":"注意"},"className":"danger","labelVisibility":"hidden","iconVisibility":"hidden"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"valine":{"avatar":"mp","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz","appKey":"fjxXbfHqEhtFc58pCX6dS5Qe","visitor":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website.css"}},"file":{"path":"工具/MQ/rabbitMQ/Message属性详解-BasicProperties.md","mtime":"2020-03-03T14:00:07.731Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-29T12:50:07.913Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Message属性详解-BasicProperties.md","level":"1.5.5.3.8","depth":4,"next":{"title":"高级特性","level":"1.5.5.3.9","depth":4,"path":"工具/MQ/rabbitMQ/高级特性/SUMMARY.md","ref":"工具/MQ/rabbitMQ/高级特性/SUMMARY.md","articles":[{"title":"消息限流与重回队列.md","level":"1.5.5.3.9.1","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/消息限流与重回队列.md","ref":"工具/MQ/rabbitMQ/高级特性/消息限流与重回队列.md","articles":[]},{"title":"事务机制.md","level":"1.5.5.3.9.2","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/事务机制.md","ref":"工具/MQ/rabbitMQ/高级特性/事务机制.md","articles":[]},{"title":"Confirm确认消息.md","level":"1.5.5.3.9.3","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/Confirm确认消息.md","ref":"工具/MQ/rabbitMQ/高级特性/Confirm确认消息.md","articles":[]},{"title":"Return消息机制.md","level":"1.5.5.3.9.4","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/Return消息机制.md","ref":"工具/MQ/rabbitMQ/高级特性/Return消息机制.md","articles":[]},{"title":"TTL与死信队列.md","level":"1.5.5.3.9.5","depth":5,"path":"工具/MQ/rabbitMQ/高级特性/TTL与死信队列.md","ref":"工具/MQ/rabbitMQ/高级特性/TTL与死信队列.md","articles":[]}]},"previous":{"title":"关于绑定.md","level":"1.5.5.3.7","depth":4,"path":"工具/MQ/rabbitMQ/关于绑定.md","ref":"工具/MQ/rabbitMQ/关于绑定.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","flexible-alerts","ancre-navigation","valine"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"notice":{"label":{"de":"注意","en":"注意"},"className":"danger","labelVisibility":"hidden","iconVisibility":"hidden"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"valine":{"avatar":"mp","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz","appKey":"fjxXbfHqEhtFc58pCX6dS5Qe","visitor":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website.css"}},"file":{"path":"工具/MQ/rabbitMQ/Message属性详解-BasicProperties.md","mtime":"2022-06-29T14:47:43.228Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-29T14:47:46.005Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

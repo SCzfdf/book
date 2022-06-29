@@ -5445,63 +5445,64 @@
 }
 </code></pre>
 <h2 id="webconfig-&#x8C03;&#x7528;&#x65B9;&#x6CD5;"><a name="webconfig-&#x8C03;&#x7528;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#webconfig-&#x8C03;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>WebConfig &#x8C03;&#x7528;&#x65B9;&#x6CD5;</h2>
-<p>```java
-public class T {
-    public static void main(String[] args) throws Exception {
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
         t2();
-    }</p>
-<pre><code>// &#x8C03;&#x7528;&#x65E0;&#x53C2;WebService
-private static void t2() throws Exception {
-    Call call = (Call) (new Service()).createCall();
-    call.setTargetEndpointAddress(new URL(&quot;http://localhost:8303/services/testService/getAllBean&quot;));
-    call.setOperationName(new QName(&quot;http://service.webservicedemo.sxt.com&quot;, &quot;getAllBean&quot;));
-    call.setTimeout(30000);
-    Object invoke = call.invoke(new Object[]{});
-    System.out.println(invoke);
-}
+    }
 
-// &#x8C03;&#x7528;&#x6709;&#x53C2;&#x4E14;&#x4F7F;&#x7528;&#x4E86;&#x6CE8;&#x89E3;&#x547D;&#x540D;&#x5C5E;&#x6027;&#x7684;WebService
-private static void t3() throws Exception {
-    Call call = (Call) (new Service()).createCall();
-    call.setTargetEndpointAddress(new URL(&quot;http://localhost:8303/services/testService/helloService&quot;));
-    call.setOperationName(new QName(&quot;http://service.webservicedemo.sxt.com&quot;, &quot;helloService&quot;));
-    call.addParameter(&quot;name&quot;, XMLType.XSD_STRING, ParameterMode.IN);
-    call.setReturnType(XMLType.XSD_STRING);
-    call.setTimeout(30000);
-    String re = (String) call.invoke(new String[]{&quot;&#x5468;&#x7389;&#x78CA;&quot;});
-    System.out.println(re);
-}
+    <span class="hljs-comment">// &#x8C03;&#x7528;&#x65E0;&#x53C2;WebService</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">t2</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        Call call = (Call) (<span class="hljs-keyword">new</span> Service()).createCall();
+        call.setTargetEndpointAddress(<span class="hljs-keyword">new</span> URL(<span class="hljs-string">&quot;http://localhost:8303/services/testService/getAllBean&quot;</span>));
+        call.setOperationName(<span class="hljs-keyword">new</span> QName(<span class="hljs-string">&quot;http://service.webservicedemo.sxt.com&quot;</span>, <span class="hljs-string">&quot;getAllBean&quot;</span>));
+        call.setTimeout(<span class="hljs-number">30000</span>);
+        Object invoke = call.invoke(<span class="hljs-keyword">new</span> Object[]{});
+        System.out.println(invoke);
+    }
 
-// &#x52A8;&#x6001;&#x8C03;&#x7528;
-private static void t4() throws Exception {
-    //&#x521B;&#x5EFA;&#x52A8;&#x6001;&#x5BA2;&#x6237;&#x7AEF;
-    JaxWsDynamicClientFactory factory = JaxWsDynamicClientFactory.newInstance();
-    Client client = factory.createClient(&quot;http://localhost:8303/services/testService/helloService?wsdl&quot;);
-    // &#x9700;&#x8981;&#x5BC6;&#x7801;&#x7684;&#x60C5;&#x51B5;&#x9700;&#x8981;&#x52A0;&#x4E0A;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;
-    //client.getOutInterceptors().add(new ClientLoginInterceptor(USER_NAME,PASS_WORD));
-    HTTPConduit conduit = (HTTPConduit) client.getConduit();
-    HTTPClientPolicy httpClientPolicy = new HTTPClientPolicy();
-    //&#x8FDE;&#x63A5;&#x8D85;&#x65F6;
-    httpClientPolicy.setConnectionTimeout(2000);
-    //&#x53D6;&#x6D88;&#x5757;&#x7F16;&#x7801;
-    httpClientPolicy.setAllowChunking(false);
-    //&#x54CD;&#x5E94;&#x8D85;&#x65F6;
-    httpClientPolicy.setReceiveTimeout(120000);
-    conduit.setClient(httpClientPolicy);
-    //&#x8BBE;&#x7F6E;&#x62E6;&#x622A;&#x5668;
-    //client.getOutInterceptors().addAll(interceptors);
-    try{
-        Object[] objects = new Object[0];
-        // invoke(&quot;&#x65B9;&#x6CD5;&#x540D;&quot;,&#x53C2;&#x6570;1,&#x53C2;&#x6570;2,&#x53C2;&#x6570;3....);
-</code></pre><p>//            objects = client.invoke(&quot;helloService&quot;, &quot;sujin&quot;);
-            objects = client.invoke(&quot;getAllBean&quot;);
-            System.out.println(&quot;&#x8FD4;&#x56DE;&#x6570;&#x636E;:&quot; + objects[0]);
-        }catch (Exception e){
+    <span class="hljs-comment">// &#x8C03;&#x7528;&#x6709;&#x53C2;&#x4E14;&#x4F7F;&#x7528;&#x4E86;&#x6CE8;&#x89E3;&#x547D;&#x540D;&#x5C5E;&#x6027;&#x7684;WebService</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">t3</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        Call call = (Call) (<span class="hljs-keyword">new</span> Service()).createCall();
+        call.setTargetEndpointAddress(<span class="hljs-keyword">new</span> URL(<span class="hljs-string">&quot;http://localhost:8303/services/testService/helloService&quot;</span>));
+        call.setOperationName(<span class="hljs-keyword">new</span> QName(<span class="hljs-string">&quot;http://service.webservicedemo.sxt.com&quot;</span>, <span class="hljs-string">&quot;helloService&quot;</span>));
+        call.addParameter(<span class="hljs-string">&quot;name&quot;</span>, XMLType.XSD_STRING, ParameterMode.IN);
+        call.setReturnType(XMLType.XSD_STRING);
+        call.setTimeout(<span class="hljs-number">30000</span>);
+        String re = (String) call.invoke(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">&quot;&#x5468;&#x7389;&#x78CA;&quot;</span>});
+        System.out.println(re);
+    }
+
+    <span class="hljs-comment">// &#x52A8;&#x6001;&#x8C03;&#x7528;</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">t4</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x52A8;&#x6001;&#x5BA2;&#x6237;&#x7AEF;</span>
+        JaxWsDynamicClientFactory factory = JaxWsDynamicClientFactory.newInstance();
+        Client client = factory.createClient(<span class="hljs-string">&quot;http://localhost:8303/services/testService/helloService?wsdl&quot;</span>);
+        <span class="hljs-comment">// &#x9700;&#x8981;&#x5BC6;&#x7801;&#x7684;&#x60C5;&#x51B5;&#x9700;&#x8981;&#x52A0;&#x4E0A;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;</span>
+        <span class="hljs-comment">//client.getOutInterceptors().add(new ClientLoginInterceptor(USER_NAME,PASS_WORD));</span>
+        HTTPConduit conduit = (HTTPConduit) client.getConduit();
+        HTTPClientPolicy httpClientPolicy = <span class="hljs-keyword">new</span> HTTPClientPolicy();
+        <span class="hljs-comment">//&#x8FDE;&#x63A5;&#x8D85;&#x65F6;</span>
+        httpClientPolicy.setConnectionTimeout(<span class="hljs-number">2000</span>);
+        <span class="hljs-comment">//&#x53D6;&#x6D88;&#x5757;&#x7F16;&#x7801;</span>
+        httpClientPolicy.setAllowChunking(<span class="hljs-keyword">false</span>);
+        <span class="hljs-comment">//&#x54CD;&#x5E94;&#x8D85;&#x65F6;</span>
+        httpClientPolicy.setReceiveTimeout(<span class="hljs-number">120000</span>);
+        conduit.setClient(httpClientPolicy);
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x62E6;&#x622A;&#x5668;</span>
+        <span class="hljs-comment">//client.getOutInterceptors().addAll(interceptors);</span>
+        <span class="hljs-keyword">try</span>{
+            Object[] objects = <span class="hljs-keyword">new</span> Object[<span class="hljs-number">0</span>];
+            <span class="hljs-comment">// invoke(&quot;&#x65B9;&#x6CD5;&#x540D;&quot;,&#x53C2;&#x6570;1,&#x53C2;&#x6570;2,&#x53C2;&#x6570;3....);</span>
+<span class="hljs-comment">//            objects = client.invoke(&quot;helloService&quot;, &quot;sujin&quot;);</span>
+            objects = client.invoke(<span class="hljs-string">&quot;getAllBean&quot;</span>);
+            System.out.println(<span class="hljs-string">&quot;&#x8FD4;&#x56DE;&#x6570;&#x636E;:&quot;</span> + objects[<span class="hljs-number">0</span>]);
+        }<span class="hljs-keyword">catch</span> (Exception e){
             e.printStackTrace();
         }
     }
 }
-```<hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz',appKey: 'fjxXbfHqEhtFc58pCX6dS5Qe',placeholder: 'Just go go',avatar: 'mp',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script></p>
+</code></pre>
+<p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz',appKey: 'fjxXbfHqEhtFc58pCX6dS5Qe',placeholder: 'Just go go',avatar: 'mp',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script></p>
 
                                 
                                 </section>
@@ -5541,7 +5542,7 @@ private static void t4() throws Exception {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"创建WebService服务.md","level":"1.11.1.3","depth":3,"previous":{"title":"WebService与Socket.md","level":"1.11.1.2","depth":3,"path":"杂/WebService/WebService与Socket.md","ref":"杂/WebService/WebService与Socket.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","flexible-alerts","ancre-navigation","valine"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"notice":{"label":{"de":"注意","en":"注意"},"className":"danger","labelVisibility":"hidden","iconVisibility":"hidden"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"valine":{"avatar":"mp","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz","appKey":"fjxXbfHqEhtFc58pCX6dS5Qe","visitor":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website.css"}},"file":{"path":"杂/WebService/创建WebService服务.md","mtime":"2020-02-19T00:00:06.767Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-29T12:50:07.913Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"创建WebService服务.md","level":"1.11.1.3","depth":3,"previous":{"title":"WebService与Socket.md","level":"1.11.1.2","depth":3,"path":"杂/WebService/WebService与Socket.md","ref":"杂/WebService/WebService与Socket.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","flexible-alerts","ancre-navigation","valine"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"notice":{"label":{"de":"注意","en":"注意"},"className":"danger","labelVisibility":"hidden","iconVisibility":"hidden"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"valine":{"avatar":"mp","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz","appKey":"fjxXbfHqEhtFc58pCX6dS5Qe","visitor":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website.css"}},"file":{"path":"杂/WebService/创建WebService服务.md","mtime":"2022-06-29T14:47:44.475Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-29T14:47:46.005Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -141,3 +141,5 @@ MyBatis在设置预处理语句中的参数或从结果集中取出一个值时,
    `EnumOrdinalTypeHandler`会将枚举下标与任何兼容的 `NUMERIC` 或 `DOUBLE`类型. 储存的是**枚举下标**
 
    
+
+

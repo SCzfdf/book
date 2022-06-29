@@ -38,3 +38,5 @@ GET common-test-001/_search
   是否区分大小写. 默认false
 
   * `false`: 区分大小写
+
+

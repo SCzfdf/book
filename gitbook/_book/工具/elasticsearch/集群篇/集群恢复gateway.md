@@ -33,3 +33,5 @@ gateway是static参数, 需要在elasticsearch.yml中配置, 且只有在整个�
 
 
 ​		
+
+

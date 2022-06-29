@@ -155,3 +155,5 @@ Doublewrite Buffer Files主要是为了防止持久化的时候由于系统异�
 出现异常时可以从Doublewrite Buffer Files恢复
 
 > Doublewrite Buffer Files是顺序写, 所以比较快
+
+

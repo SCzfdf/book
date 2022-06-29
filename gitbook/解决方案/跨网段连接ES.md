@@ -79,3 +79,5 @@
 平时大多都用192.168.x.x没反应过来....
 
 > 后面咨询一些大佬, 说可以用`network.bind_host`和`network.publish_host`分别指定来达到相同的效果
+
+

@@ -114,3 +114,4 @@ semaphore.acquire(2); // 会一直阻塞
 但如果放开第二行的注释, 则可以执行! `semaphore.release()`给令牌桶里永久增加了一个令牌. 
 
 在`Saphore`里还看到了永久去除令牌的API(`reducePermits()`)不过是`protected`的, 外部不能调用(太危险了...)
+

@@ -92,3 +92,5 @@ GET kibana_sample_data_ecommerce/_search
 * 数值指标聚合(metric)
 * 分桶分组聚合(bucket)
 * 管道二次聚合(pipeline)
+
+

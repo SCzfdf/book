@@ -112,3 +112,5 @@ redis info 命令中的RDB和AOF信息
 | aof_last_write_status        | 上次aof写入状态                                              |
 | aof_last_cow_size            | AOF过程中父进程与子进程相比执行了多少修改(包括读缓冲区，写缓冲区，数据修改等)。 |
 
+
+

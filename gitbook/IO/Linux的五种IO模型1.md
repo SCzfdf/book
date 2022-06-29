@@ -196,3 +196,4 @@ while(channel.read(buffer) > -1) { // 如果还未拷贝到用户缓冲区则一
 
 
 ​		
+

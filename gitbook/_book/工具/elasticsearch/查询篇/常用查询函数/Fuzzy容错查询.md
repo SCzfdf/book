@@ -96,3 +96,4 @@ GET common-test-001/_search
 * **transpositions**: (boolean)
 
   是否匹配换位(ab => ba)
+
