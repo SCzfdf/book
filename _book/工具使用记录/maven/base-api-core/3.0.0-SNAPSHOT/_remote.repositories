@@ -1,9 +1,0 @@
-#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
-#Wed Dec 16 15:27:48 CST 2020
-base-api-core-3.0.0-SNAPSHOT.pom>=
-base-api-core-3.0.0-20200715.032240-73.pom>nexus-mirror=
-base-api-core-3.0.0-20200715.032240-73.jar>nexus-mirror=
-base-api-core-3.0.0-SNAPSHOT-sources.jar>=
-base-api-core-3.0.0-20201210.025458-74.pom>nexus-mirror=
-base-api-core-3.0.0-20201210.025458-74.jar>nexus-mirror=
-base-api-core-3.0.0-SNAPSHOT.jar>=

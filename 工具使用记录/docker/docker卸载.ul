@@ -1,5 +1,0 @@
-1. 卸载docker
-    sudo yum remove docker-ce
-
-2. 删除容器
-sudo rm -rf /var/lib/docker

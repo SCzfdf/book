@@ -1,7 +1,0 @@
-参考: https://www.jianshu.com/p/ec45ce13289f
-
-1. 如果是没有push 并是最近修改的
-git commit --amend
-修改第一行,保存即可
-
-2. 如果不是最近修改的

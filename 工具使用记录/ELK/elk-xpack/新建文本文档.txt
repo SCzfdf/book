@@ -1,2 +1,0 @@
-xpack.security.enabled: true #权限开启
-xpack.security.transport.ssl.enabled: true #开始ssl通讯

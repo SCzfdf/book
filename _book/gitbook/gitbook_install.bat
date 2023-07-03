@@ -1,3 +1,0 @@
-gitbook install
-
-pause

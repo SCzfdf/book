@@ -1,2 +1,0 @@
-# rabbitMQ简介
-
