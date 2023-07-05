@@ -5477,7 +5477,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#idea&#x96C6;&#x6210;docker"><b></b>idea&#x96C6;&#x6210;docker</a></li><ul><li><span class="title-icon "></span><a href="#docker&#x5F00;&#x542F;ftp"><b></b>docker&#x5F00;&#x542F;ftp</a></li><li><span class="title-icon "></span><a href="#idea&#x914D;&#x7F6E;docker"><b></b>idea&#x914D;&#x7F6E;docker</a></li></ul></ul></div><a href="#idea&#x96C6;&#x6210;docker" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="idea&#x96C6;&#x6210;docker"><a name="idea&#x96C6;&#x6210;docker" class="anchor-navigation-ex-anchor" href="#idea&#x96C6;&#x6210;docker"><i class="fa fa-link" aria-hidden="true"></i></a>idea&#x96C6;&#x6210;docker</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#idea&#x96C6;&#x6210;docker"><b></b>idea&#x96C6;&#x6210;docker</a></li><ul><li><span class="title-icon "></span><a href="#docker&#x5F00;&#x542F;ftp"><b></b>docker&#x5F00;&#x542F;ftp</a></li><li><span class="title-icon "></span><a href="#idea&#x914D;&#x7F6E;docker"><b></b>idea&#x914D;&#x7F6E;docker</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#idea&#x96C6;&#x6210;docker" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="idea&#x96C6;&#x6210;docker"><a name="idea&#x96C6;&#x6210;docker" class="anchor-navigation-ex-anchor" href="#idea&#x96C6;&#x6210;docker"><i class="fa fa-link" aria-hidden="true"></i></a>idea&#x96C6;&#x6210;docker</h1>
 <p><a href="https://docs.docker.com/config/daemon/remote-access/" target="_blank">docker&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;&#x5F00;&#x542F;</a></p>
 <p>&#x200B;        </p>
 <p>&#x4F7F;&#x7528;idea&#x7684;&#x7248;&#x672C;&#x4E3A;2023.1</p>
@@ -5520,16 +5520,82 @@ ExecStart=/usr/bin/dockerd-current \
 <pre><code class="lang-shell">netstat -lntp | grep dockerd
 # tcp6       0      0 :::2375                 :::*                    LISTEN      1252/dockerd-curren
 </code></pre>
-<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x9700;&#x8981;&#x6D4B;&#x8BD5;&#x8FDE;&#x63A5;&#x7684;&#x5730;&#x65B9;&#x8BBF;&#x95EE;<code>http://192.168.2.200:2375/version</code>, &#x51FA;&#x6765;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x5C31;&#x662F;&#x6210;&#x529F;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x9700;&#x8981;&#x6D4B;&#x8BD5;&#x8FDE;&#x63A5;&#x7684;&#x5730;&#x65B9;&#x8BBF;&#x95EE;<code>http://ip:2375/version</code>, &#x51FA;&#x6765;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x5C31;&#x662F;&#x6210;&#x529F;</p>
 </li>
 </ol>
 <h2 id="idea&#x914D;&#x7F6E;docker"><a name="idea&#x914D;&#x7F6E;docker" class="anchor-navigation-ex-anchor" href="#idea&#x914D;&#x7F6E;docker"><i class="fa fa-link" aria-hidden="true"></i></a>idea&#x914D;&#x7F6E;docker</h2>
 <ol>
-<li><p>&#x94FE;&#x63A5;docker</p>
-<p>&#x7B2C;&#x4E00;&#x4E2A;&#x548C;TCP</p>
+<li><p>&#x8FC1;&#x79FB;&#x914D;&#x7F6E;&#x6587;&#x4EF6;(&#x591A;&#x6A21;&#x5757;&#x9879;&#x76EE;)</p>
+<p>&#x90E8;&#x5206;&#x591A;&#x6A21;&#x5757;&#x9879;&#x76EE;&#x5C06;&#x901A;&#x7528;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x5171;&#x7528;&#x7684;core&#x9879;&#x76EE;. &#x6709;&#x65F6;&#x5019;&#x4F1A;&#x8BFB;&#x53D6;&#x4E0D;&#x5230;, &#x6709;&#x65F6;&#x5019;&#x53C8;&#x53EF;&#x4EE5;</p>
+<p>&#x5982;&#x679C;&#x9047;&#x5230;&#x8BFB;&#x53D6;&#x4E0D;&#x5230;&#x7684;&#x9700;&#x8981;&#x5C06;core&#x9879;&#x76EE;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8FC1;&#x79FB;&#x5230;&#x672C;&#x5730;, &#x6216;&#x8005;&#x76F4;&#x63A5;&#x4E0A;&#x914D;&#x7F6E;&#x4E2D;&#x5FC3;</p>
+</li>
+<li><p>&#x8FDE;&#x63A5;docker</p>
+<p><code>docker for mac</code>&#x548C;<code>TCP</code>&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x94FE;&#x63A5;&#x7684;, &#x4F46;<code>ssh</code>&#x4E0D;&#x884C;, &#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;</p>
 <p><img src="idea%E9%9B%86%E6%88%90docker.assets/image-20230704182311767.png" alt="image-20230704182311767"></p>
 </li>
+<li><p>&#x7F16;&#x5199;Dockerfile</p>
+<blockquote>
+<p>&#x9ED8;&#x8BA4;&#x4E0A;&#x4E0B;&#x6587;&#x4E3A;Dockerfile&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;, &#x4E00;&#x822C;Dockerfile&#x90FD;&#x5728;resource&#x6587;&#x4EF6;&#x5939;, &#x540E;&#x9762;&#x4F1A;&#x914D;&#x7F6E;&#x4E0A;&#x4E0B;&#x6587;</p>
+</blockquote>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> fabletang/jre8-alpine
+<span class="hljs-keyword">LABEL</span> <span class="bash">authors=<span class="hljs-string">&quot;cgb&quot;</span>
+</span>
+<span class="hljs-keyword">ENV</span> PROJECT_NAME=http-gacmotor-service \
+    PROJECT_DIR=/data/service/${PROJECT_NAME} \
+    JAVA_OPTS=-server
+
+<span class="hljs-keyword">RUN</span> <span class="bash">mkdir -p <span class="hljs-variable">${PROJECT_DIR}</span>/lib \
+  &amp;&amp; mkdir -p <span class="hljs-variable">${PROJECT_DIR}</span>/etc \
+  &amp;&amp; touch <span class="hljs-variable">${PROJECT_DIR}</span>/app.log \
+  &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-variable">${PROJECT_DIR}</span> \
+  &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-variable">${JAVA_OPTS}</span>
+</span>
+<span class="hljs-keyword">COPY</span> <span class="bash">build/lib/*.jar /data/service/<span class="hljs-variable">${PROJECT_NAME}</span>/lib/
+</span><span class="hljs-keyword">COPY</span> <span class="bash">build/resources/main/* /data/service/<span class="hljs-variable">${PROJECT_NAME}</span>/etc/
+</span><span class="hljs-keyword">COPY</span> <span class="bash">build/resources/main/*.sh /data/service/<span class="hljs-variable">${PROJECT_NAME}</span>/
+</span>
+<span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">9240</span>
+
+<span class="hljs-keyword">WORKDIR</span> <span class="bash">/data/service/<span class="hljs-variable">${PROJECT_NAME}</span>/
+</span><span class="hljs-keyword">ENTRYPOINT</span> <span class="bash">[<span class="hljs-string">&quot;sh&quot;</span>, <span class="hljs-string">&quot;server.sh&quot;</span>]
+</span><span class="hljs-comment">#ENTRYPOINT [&quot;top&quot;]</span>
+</code></pre>
+</li>
+<li><p>&#x914D;&#x7F6E;idea-docker</p>
+<p>&#x542F;&#x52A8;&#x4E00;&#x6B21;&#x8FC7;&#x540E;&#x4F1A;&#x6709;&#x4E2A;docker&#x56FE;&#x6807;, &#x70B9;&#x51FB;&#x7F16;&#x8F91;</p>
+<p><img src="idea%E9%9B%86%E6%88%90docker.assets/image-20230705112559597.png" alt="image-20230705112559597"></p>
+<p>&#x200B;        </p>
+<p>&#x6309;&#x7167;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#x4E0A;&#x4E0B;&#x6587;&#x548C;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;</p>
+<p><img src="idea%E9%9B%86%E6%88%90docker.assets/image-20230705115454394.png" alt="image-20230705115454394"></p>
+</li>
+<li><p>&#x914D;&#x7F6E;<code>.dockerignore</code>&#x6587;&#x4EF6;</p>
+<p>&#x6587;&#x4EF6;&#x4F5C;&#x7528;&#x662F;&#x5FFD;&#x7565;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x5939;, &#x8FD9;&#x91CC;&#x628A;gradle build&#x751F;&#x6210;&#x7684;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x5939;&#x90FD;&#x6392;&#x9664;</p>
+<p>&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x5904;(http-gacmotor-service)&#x521B;&#x5EFA;<code>.dockerignore</code></p>
+<pre><code class="lang-shell">build/classes/
+build/generated/
+build/scripts/
+build/distributions/
+build/tmp/
+build/libs/
+out/
+src/
+</code></pre>
+</li>
 </ol>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h2>
+<ul>
+<li>&#x4F18;&#x70B9;:<ol>
+<li>&#x76F8;&#x5BF9;&#x4E8E;&#x4F20;&#x7EDF;&#x7684;&#x624B;&#x52A8;&#x4E0A;&#x4F20;idea-docker&#x7684;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#x4E00;&#x6B21;&#x540E;&#x4F1A;&#x7701;&#x5FC3;&#x4E0D;&#x5C11;</li>
+<li>&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x90E8;&#x7F72;&#x548C;&#x770B;&#x65E5;&#x5FD7;&#x53D8;&#x5F97;&#x66F4;&#x5FEB;&#x6377;</li>
+</ol>
+</li>
+<li>&#x7F3A;&#x70B9;:<ol>
+<li>&#x4E0A;&#x4F20;&#x901F;&#x5EA6;&#x53D6;&#x51B3;&#x4E8E;&#x7F51;&#x901F;, &#x800C;&#x4E14;&#x53EA;&#x80FD;&#x6574;&#x4E2A;&#x6253;&#x5305;&#x4E0A;&#x4F20;, &#x5BF9;&#x4E8E;&#x4F9D;&#x8D56;&#x5206;&#x79BB;&#x7684;&#x9879;&#x76EE;&#x5C0F;&#x6539;&#x52A8;&#x7684;&#x8BDD;&#x53CD;&#x800C;&#x4F1A;&#x6162;&#x4E0D;&#x5C11;</li>
+<li><code>.dockerignore</code>&#x653E;&#x5728;&#x9879;&#x76EE;&#x6587;&#x4EF6;&#x5939;&#x4E0B;, &#x6709;&#x70B9;&#x5947;&#x602A;</li>
+<li>&#x5BF9;&#x4E8E;jenkins&#x6253;&#x5305;, &#x4E5F;&#x4F1A;&#x6162;&#x4E0D;&#x5C11;, &#x6BD5;&#x7ADF;jenkins&#x662F;&#x5728;&#x672C;&#x5730;&#x7F16;&#x8BD1;&#x5C11;&#x4E86;&#x4E0A;&#x4F20;&#x5305;&#x7684;&#x65F6;&#x95F4;. &#x4F46;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x7ED3;&#x5408;</li>
+</ol>
+</li>
+</ul>
 <p><hr><div id="vcomments"></div><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>new Valine({el: "#vcomments",appId: 'qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz',appKey: 'fjxXbfHqEhtFc58pCX6dS5Qe',placeholder: 'Just go go',avatar: 'mp',meta: undefined,pageSize: 10,lang: 'zh-CN',recordIP: false})</script></p>
 
                                 
@@ -5574,7 +5640,7 @@ ExecStart=/usr/bin/dockerd-current \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"idea集成docker.md","level":"1.5.1.5.5","depth":4,"next":{"title":"dockerfile","level":"1.5.1.5.6","depth":4,"path":"工具/docker/镜像/dockerfile/SUMMARY.md","ref":"工具/docker/镜像/dockerfile/SUMMARY.md","articles":[{"title":"jdk镜像.md","level":"1.5.1.5.6.1","depth":5,"path":"工具/docker/镜像/dockerfile/jdk镜像.md","ref":"工具/docker/镜像/dockerfile/jdk镜像.md","articles":[]},{"title":"gosu.md","level":"1.5.1.5.6.2","depth":5,"path":"工具/docker/镜像/dockerfile/gosu.md","ref":"工具/docker/镜像/dockerfile/gosu.md","articles":[]},{"title":"SpringBoot服务镜像.md","level":"1.5.1.5.6.3","depth":5,"path":"工具/docker/镜像/dockerfile/SpringBoot服务镜像.md","ref":"工具/docker/镜像/dockerfile/SpringBoot服务镜像.md","articles":[]},{"title":"jenkins+maven.md","level":"1.5.1.5.6.4","depth":5,"path":"工具/docker/镜像/dockerfile/jenkins+maven.md","ref":"工具/docker/镜像/dockerfile/jenkins+maven.md","articles":[]}]},"previous":{"title":"关于sh和bash.md","level":"1.5.1.5.4","depth":4,"path":"工具/docker/镜像/关于sh和bash.md","ref":"工具/docker/镜像/关于sh和bash.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","flexible-alerts","ancre-navigation","valine"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"notice":{"label":{"de":"注意","en":"注意"},"className":"danger","labelVisibility":"hidden","iconVisibility":"hidden"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"valine":{"avatar":"mp","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz","appKey":"fjxXbfHqEhtFc58pCX6dS5Qe","visitor":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website.css"}},"file":{"path":"工具/docker/镜像/idea集成docker.md","mtime":"2023-07-05T03:22:08.227Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-05T03:22:09.990Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"idea集成docker.md","level":"1.5.1.5.5","depth":4,"next":{"title":"dockerfile","level":"1.5.1.5.6","depth":4,"path":"工具/docker/镜像/dockerfile/SUMMARY.md","ref":"工具/docker/镜像/dockerfile/SUMMARY.md","articles":[{"title":"jdk镜像.md","level":"1.5.1.5.6.1","depth":5,"path":"工具/docker/镜像/dockerfile/jdk镜像.md","ref":"工具/docker/镜像/dockerfile/jdk镜像.md","articles":[]},{"title":"gosu.md","level":"1.5.1.5.6.2","depth":5,"path":"工具/docker/镜像/dockerfile/gosu.md","ref":"工具/docker/镜像/dockerfile/gosu.md","articles":[]},{"title":"SpringBoot服务镜像.md","level":"1.5.1.5.6.3","depth":5,"path":"工具/docker/镜像/dockerfile/SpringBoot服务镜像.md","ref":"工具/docker/镜像/dockerfile/SpringBoot服务镜像.md","articles":[]},{"title":"jenkins+maven.md","level":"1.5.1.5.6.4","depth":5,"path":"工具/docker/镜像/dockerfile/jenkins+maven.md","ref":"工具/docker/镜像/dockerfile/jenkins+maven.md","articles":[]}]},"previous":{"title":"关于sh和bash.md","level":"1.5.1.5.4","depth":4,"path":"工具/docker/镜像/关于sh和bash.md","ref":"工具/docker/镜像/关于sh和bash.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","flexible-alerts","ancre-navigation","valine"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"notice":{"label":{"de":"注意","en":"注意"},"className":"danger","labelVisibility":"hidden","iconVisibility":"hidden"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"valine":{"avatar":"mp","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz","appKey":"fjxXbfHqEhtFc58pCX6dS5Qe","visitor":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website.css"}},"file":{"path":"工具/docker/镜像/idea集成docker.md","mtime":"2023-07-05T03:57:41.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-05T07:13:13.182Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
