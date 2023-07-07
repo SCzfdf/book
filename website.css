@@ -29,3 +29,7 @@ p img {
     display: block;
     margin: 0 auto;
 }
+
+.page-inner {
+    max-width: 1000px;
+}
