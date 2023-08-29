@@ -1,12 +1,11 @@
+监控|10
 docker|127
 MyBatis|127
 mycat|127
 Zipkin|127
 nginx|127
 Kafka|127
-Mysql|127
 MQ|127
 Skywalking|127
 jenkins|127
 nosql|127
-elasticsearch|127
