@@ -30,6 +30,13 @@ p img {
     margin: 0 auto;
 }
 
-.page-inner {
-    max-width: 70%;
+@media (min-width: 1080px) {
+    .page-inner {
+        max-width: 70%;
+    }
+}
+@media (max-width: 1080px) {
+    .page-inner {
+        max-width: 100%;
+    }
 }
