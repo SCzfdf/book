@@ -5700,8 +5700,8 @@
                                 
                                 <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x5F00;&#x53D1;&#x65F6;redis&#x94FE;&#x63A5;&#x65AD;&#x5F00;"><b></b>&#x5F00;&#x53D1;&#x65F6;redis&#x94FE;&#x63A5;&#x65AD;&#x5F00;</a></li><ul><li><span class="title-icon "></span><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;"><b></b>&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li></ul></ul></div><a href="#&#x5F00;&#x53D1;&#x65F6;redis&#x94FE;&#x63A5;&#x65AD;&#x5F00;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5F00;&#x53D1;&#x65F6;redis&#x94FE;&#x63A5;&#x65AD;&#x5F00;"><a name="&#x5F00;&#x53D1;&#x65F6;redis&#x94FE;&#x63A5;&#x65AD;&#x5F00;" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x53D1;&#x65F6;redis&#x94FE;&#x63A5;&#x65AD;&#x5F00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x53D1;&#x65F6;redis&#x94FE;&#x63A5;&#x65AD;&#x5F00;</h1>
 <p><a href="https://blog.csdn.net/qq_42969135/article/details/123206211" target="_blank">&#x89E3;&#x51B3;Redis command timed out</a></p>
+<p><a href="https://github.com/redis/lettuce/issues/2082" target="_blank">github&#x5BF9;15&#x5206;&#x949F;&#x94FE;&#x63A5;&#x65AD;&#x5F00;&#x7684;&#x8BA8;&#x8BBA;</a></p>
 <p>&#x200B;        </p>
-<p>&#x6700;&#x4E3B;&#x8981;&#x7684;&#x8981;&#x5347;&#x7EA7;lettuce&#x4E3A;6.3&#x4EE5;&#x4E0A;&#x7248;&#x672C;</p>
 <p>&#x5BFC;&#x81F4;&#x7684;&#x7684;&#x539F;&#x56E0;&#x6709;2&#x4E2A;</p>
 <ol>
 <li>springboot2.x&#x4E4B;&#x540E;, springboot&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;Redis&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x662F;lettuce, &#x800C;&#x4E0D;&#x662F;jedis. lettuce&#x7684;&#x5237;&#x65B0;&#x94FE;&#x63A5;&#x662F;&#x5173;&#x95ED;&#x7684;</li>
@@ -5734,20 +5734,19 @@ spring.redis.lettuce.cluster.refresh.period=30000
 </code></pre>
 </li>
 <li><p>&#x5B9A;&#x65F6;&#x6821;&#x9A8C;</p>
-<pre><code class="lang-java"><span class="hljs-meta">@Component</span>
-<span class="hljs-meta">@Slf</span>4j
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LettuceConnectionValidTask</span>   </span>{
-    <span class="hljs-meta">@Autowired</span>
-    <span class="hljs-keyword">private</span> RedisConnectionFactory redisConnectionFactory;
+<pre><code class="lang-java"><span class="hljs-meta">@Resource</span>
+<span class="hljs-keyword">private</span> StringRedisTemplate dupShowMasterRedisTemplate;
 
-    <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x957F;&#x4E00;&#x70B9; </span>
-    <span class="hljs-meta">@Scheduled</span>(cron=<span class="hljs-string">&quot;0/2 * * * * ?&quot;</span>)
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">task</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">if</span>(redisConnectionFactory <span class="hljs-keyword">instanceof</span> LettuceConnectionFactory){
-            LettuceConnectionFactory c=(LettuceConnectionFactory)redisConnectionFactory;
-            c.validateConnection();
+<span class="hljs-comment">// 1 &#x5206;&#x949F;</span>
+<span class="hljs-meta">@Scheduled</span>(fixedRate = <span class="hljs-number">60000</span>)
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configureTasks</span><span class="hljs-params">()</span> </span>{
+    log.debug(<span class="hljs-string">&quot;ping redis&quot;</span>);
+    dupShowMasterRedisTemplate.execute(<span class="hljs-keyword">new</span> RedisCallback&lt;String&gt;() {
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">doInRedis</span><span class="hljs-params">(@NotNull RedisConnection connection)</span> <span class="hljs-keyword">throws</span> DataAccessException </span>{
+            <span class="hljs-keyword">return</span> connection.ping();
         }
-    }
+    });
 }
 </code></pre>
 </li>
@@ -5814,7 +5813,7 @@ spring.redis.lettuce.cluster.refresh.period=30000
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"开发时redis链接断开.md","level":"1.10.9","depth":2,"next":{"title":"Mybatis数据权限插件.md","level":"1.10.10","depth":2,"path":"解决方案/Mybatis数据权限插件.md","ref":"解决方案/Mybatis数据权限插件.md","articles":[]},"previous":{"title":"文件分片上传.md","level":"1.10.8","depth":2,"path":"解决方案/文件分片上传.md","ref":"解决方案/文件分片上传.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","flexible-alerts","ancre-navigation","valine"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"notice":{"label":{"de":"注意","en":"注意"},"className":"danger","labelVisibility":"hidden","iconVisibility":"hidden"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"valine":{"avatar":"mp","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz","appKey":"fjxXbfHqEhtFc58pCX6dS5Qe","visitor":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website.css"}},"file":{"path":"解决方案/开发时redis链接断开.md","mtime":"2024-06-19T09:50:32.749Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-06-19T09:50:35.547Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"开发时redis链接断开.md","level":"1.10.9","depth":2,"next":{"title":"Mybatis数据权限插件.md","level":"1.10.10","depth":2,"path":"解决方案/Mybatis数据权限插件.md","ref":"解决方案/Mybatis数据权限插件.md","articles":[]},"previous":{"title":"文件分片上传.md","level":"1.10.8","depth":2,"path":"解决方案/文件分片上传.md","ref":"解决方案/文件分片上传.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","flexible-alerts","ancre-navigation","valine"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"notice":{"label":{"de":"注意","en":"注意"},"className":"danger","labelVisibility":"hidden","iconVisibility":"hidden"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"valine":{"avatar":"mp","lang":"zh-CN","pageSize":10,"placeholder":"Just go go","recordIP":false,"appId":"qorxDDyAw2HVeR43JA9UynNf-gzGzoHsz","appKey":"fjxXbfHqEhtFc58pCX6dS5Qe","visitor":true}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website.css"}},"file":{"path":"解决方案/开发时redis链接断开.md","mtime":"2024-06-20T03:35:21.896Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-06-20T03:35:27.287Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
